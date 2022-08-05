@@ -9,5 +9,6 @@ margin_right = 12.0
 margin_bottom = 20.0
 text = "Play The Game"
 script = ExtResource( 1 )
+scene_to_load = "res://Doom.tscn"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
