@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Textures/grass.jpeg" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://buildings/Residential Buildings 007.fbx" type="PackedScene" id=3]
+[ext_resource path="res://Residential Buildings 001-update.tscn" type="PackedScene" id=4]
+[ext_resource path="res://buildings/Residential Buildings 002.fbx" type="PackedScene" id=5]
+[ext_resource path="res://buildings/Residential Buildings 003.fbx" type="PackedScene" id=6]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 200, 200 )
@@ -28,6 +32,18 @@ material/0 = SubResource( 3 )
 [node name="CollisionShape" type="CollisionShape" parent="Floor/StaticBody"]
 shape = SubResource( 4 )
 
+[node name="Residential Buildings 007" parent="Floor" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.842547, 1.78814e-07, -42.1038 )
+
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.707107, 0.353553, 0.612373, 0, -0.866026, 0.5, 0.707107, -0.353553, -0.612373, 0, 0, 0 )
 shadow_enabled = true
+
+[node name="Residential Buildings 002" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7654, 0.66261, -40.3643 )
+
+[node name="Residential Buildings 003" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8518, 0.66261, 2.84738 )
+
+[node name="Residential Buildings 001" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.48381, 0.66261, -5.82977 )
