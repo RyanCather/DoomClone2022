@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Textures/grass.jpeg" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Residential Buildings 001-update.tscn" type="PackedScene" id=4]
 [ext_resource path="res://buildings/Residential Buildings 002.fbx" type="PackedScene" id=5]
 [ext_resource path="res://buildings/Residential Buildings 003.fbx" type="PackedScene" id=6]
+[ext_resource path="res://wall.tscn" type="PackedScene" id=7]
+[ext_resource path="res://woodencrate.tscn" type="PackedScene" id=8]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 200, 200 )
@@ -47,3 +49,106 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8518, 0.66261, 2.84738 )
 
 [node name="Residential Buildings 001" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.48381, 0.66261, -5.82977 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1046, 1.7509, -10.3797 )
+use_collision = true
+
+[node name="Spatial" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9344, 5.47542, -12.5226 )
+
+[node name="Spatial2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.999991, -0.00425859, 0, 0.00425859, 0.999991, 35.4345, 5.47542, -12.5226 )
+
+[node name="Spatial3" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0067, 5.47542, -12.5226 )
+
+[node name="Spatial4" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5068, 5.47542, -12.5226 )
+
+[node name="Spatial5" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.00244351, 0, -0.999997, 0, 1, 0, 0.999997, 0, 0.00244351, 38.2385, 5.24374, 2.56381 )
+
+[node name="Spatial6" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.00244351, 0, -0.999997, 0, 1, 0, 0.999997, 0, 0.00244351, 38.2544, 5.24374, 9.06383 )
+
+[node name="Spatial7" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.00244351, 0, -0.999997, 0, 1, 0, 0.999997, 0, 0.00244351, 38.2069, 5.24374, -10.3638 )
+
+[node name="Spatial8" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.00244351, 0, -0.999997, 0, 1, 0, 0.999997, 0, 0.00244351, 38.2228, 5.24374, -3.86381 )
+
+[node name="Spatial19" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.00244351, 0, -0.999997, 0, 1, 0, 0.999997, 0, 0.00244351, 14.3123, 5.24374, 2.56381 )
+
+[node name="Spatial20" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.00244351, 0, -0.999997, 0, 1, 0, 0.999997, 0, 0.00244351, 14.3282, 5.24374, 9.06383 )
+
+[node name="Spatial21" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.00244351, 0, -0.999997, 0, 1, 0, 0.999997, 0, 0.00244351, 14.2807, 5.24374, -10.3638 )
+
+[node name="Spatial22" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.00244351, 0, -0.999997, 0, 1, 0, 0.999997, 0, 0.00244351, 14.2966, 5.24374, -3.86381 )
+
+[node name="Spatial9" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.118508, 0, 0.992953, 0, 1, 0, -0.992953, 0, 0.118508, 14.4142, 5.13217, -10.1508 )
+
+[node name="Spatial10" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.9344, 5.47542, 17.4935 )
+
+[node name="Spatial11" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.4345, 5.47542, 17.4935 )
+
+[node name="Spatial12" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0067, 5.47542, 17.4935 )
+
+[node name="Spatial13" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5068, 5.47542, 17.5152 )
+
+[node name="Spatial23" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.8144, 5.47542, 17.4935 )
+
+[node name="Spatial24" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 61.3144, 5.47542, 17.4935 )
+
+[node name="Spatial25" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.8867, 5.47542, 17.4935 )
+
+[node name="Spatial26" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.3867, 5.47542, 17.4935 )
+
+[node name="Spatial27" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.8144, 5.47542, 17.4935 )
+
+[node name="Spatial28" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 61.3144, 5.47542, 17.4935 )
+
+[node name="Spatial29" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.8867, 5.47542, 17.4935 )
+
+[node name="Spatial30" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.3867, 5.47542, 17.4935 )
+
+[node name="Spatial14" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.4879, 5.47542, 12.0877 )
+
+[node name="Spatial15" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.988, 5.47542, 12.0877 )
+
+[node name="Spatial16" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5603, 5.47542, 12.0877 )
+
+[node name="Spatial17" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.0603, 5.47542, 12.0877 )
+
+[node name="Spatial18" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.00684165, 0, 0.999977, 0, 1, 0, -0.999977, 0, -0.00684165, 14.4142, 5.15821, 15.4563 )
+
+[node name="Spatial31" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0135, 1.99822, 1.21605 )
+
+[node name="Spatial32" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.362, 1.85072, 3.21051 )
+
+[node name="Spatial33" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5619, 1.69986, 1.97502 )
