@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Textures/30504322517_d79730caeb_b.jpeg" type="Texture" id=1]
+[ext_resource path="res://Textures/texture-metal-surface-cracked-yellow-paint-traces-rust-192620381.jpeg" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 2 )
+
+[node name="light post" type="Spatial"]
+
+[node name="pole" type="CSGBox" parent="."]
+transform = Transform( 0.257414, 0, 0, 0, 3.56811, 0, 0, 0, 0.257414, 0, 6.66767, 0 )
+height = 3.78079
+material = SubResource( 1 )
+
+[node name="pole2" type="CSGBox" parent="."]
+transform = Transform( 0.257414, 0, 0, 0, 0.38871, -0.118083, 0, 0.441869, 0.0899192, 0, 13.9986, 0.681006 )
+height = 3.78079
+material = SubResource( 2 )
+
+[node name="pole3" type="CSGBox" parent="."]
+transform = Transform( 0.257414, 0, 0, 0, -0.386377, -0.104794, 0, 0.443911, -0.105106, 0, 13.9986, 2.15086 )
+height = 3.78079
+material = SubResource( 3 )
+
+[node name="base" type="CSGBox" parent="."]
+transform = Transform( 2.00529, 0, 0, 0, 0.231039, 0, 0, 0, 2.00529, 0, -0.016171, 0 )
+material = SubResource( 4 )
+
+[node name="cone" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0153781, 12.6583, 2.82082 )
+height = 2.0
+cone = true
+material = SubResource( 5 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 12.0731, 2.82291 )
+spot_range = 16.953
+spot_attenuation = 0.217638
+spot_angle = 39.22
+spot_angle_attenuation = 3.24901
