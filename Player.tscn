@@ -19,3 +19,8 @@ shape = SubResource( 1 )
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.18592, 0 )
 environment = ExtResource( 1 )
 current = true
+
+[node name="playerScore" type="Label" parent="Camera"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "asdfasdfzsdfasdf"
