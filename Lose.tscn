@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SceneChange.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Node2D" type="Control"]
+margin_right = -1024.0
+margin_bottom = -600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 1038.0
+margin_bottom = 598.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 1 )
+
+[node name="Label2" type="Label" parent="GridContainer"]
+margin_right = 173.0
+margin_bottom = 201.0
+text = "
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Label" type="Label" parent="GridContainer"]
+margin_top = 205.0
+margin_right = 173.0
+margin_bottom = 219.0
+text = "You Lost!"
+
+[node name="Button" type="Button" parent="GridContainer"]
+margin_top = 223.0
+margin_right = 173.0
+margin_bottom = 243.0
+text = "Return to the main menu"
+script = ExtResource( 1 )
+scene_to_load = "res://Main Menu.tscn"
+
+[connection signal="pressed" from="GridContainer/Button" to="GridContainer/Button" method="_on_Button_pressed"]
