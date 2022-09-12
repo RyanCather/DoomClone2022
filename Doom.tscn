@@ -190,3 +190,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8518, 0.66261, 2.84738 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.48381, 0.66261, -5.82977 )
 
 [node name="Enemy" parent="Navigation" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1007, 3.42534, 0 )

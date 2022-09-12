@@ -40,6 +40,9 @@ func _process (delta):
 	# reset the mouse delta vector
 	mouseDelta = Vector2()
 	$Camera/playerScore.text = str(Global.current_score)
+	if Global.player_health <= 0:
+		print("Dead")
+		get_tree().change_scene("res://Lose.tscn")
 
 
 # called every physics step
