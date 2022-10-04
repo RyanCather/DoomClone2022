@@ -6,10 +6,11 @@
 [sub_resource type="CapsuleShape" id=1]
 
 [node name="Bullet" type="Area"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00470328, 1.19209e-07, 0.00165081 )
+transform = Transform( -1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="bulletMesh" type="CSGCombiner" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 
 [node name="CSGSphere" type="CSGSphere" parent="bulletMesh"]
 snap = 0.0001

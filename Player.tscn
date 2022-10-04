@@ -24,3 +24,6 @@ current = true
 margin_right = 40.0
 margin_bottom = 14.0
 text = "asdfasdfzsdfasdf"
+
+[node name="bulletSpawn" type="Spatial" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.45527 )
