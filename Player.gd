@@ -16,10 +16,15 @@ var mouseDelta : Vector2 = Vector2()			# How much the mouse has moved since last
 
 # player components
 onready var camera = get_node("Camera")		# "attach" the camera to access from script.
+onready var bulletScene = preload("res://Bullet.tscn")
+onready var bulletSpawn = get_node("Camera/bulletSpawn")
+var ammo : int = 15
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
 
 # called when an input is detected
 func _input (event):
@@ -43,7 +48,17 @@ func _process (delta):
 	if Global.player_health <= 0:
 		print("Dead")
 		get_tree().change_scene("res://Lose.tscn")
+	
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
 
+func shoot ():
+	var bullet = bulletScene.instance()
+	get_node("/root/Doom").add_child(bullet)
+	bullet.global_transform = bulletSpawn.global_transform
+	bullet.scale = Vector3(0.1,0.1,0.1) # Scale appropriately.
+
+	ammo -= 1
 
 # called every physics step
 func _physics_process (delta):

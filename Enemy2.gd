@@ -5,11 +5,6 @@ var path = []
 var path_node = 0
 var speed = 10
 onready var player = $"../../Player"
-var health = 100
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 func _physics_process(delta):
 	if path_node < path.size():
@@ -26,14 +21,3 @@ func move_to(target_pos):
 
 func _on_Timer_timeout():
 	move_to(player.global_transform.origin)
-
-
-func _on_Area_body_entered(body):
-	if (body.name == "Player"):
-		Global.player_health-= 100
-		queue_free()
-
-func take_damage(damage):
-	health -= 50
-	if health <=0:
-		queue_free()
