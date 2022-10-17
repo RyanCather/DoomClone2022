@@ -77,6 +77,12 @@ func _physics_process (delta):
 		input.x += 1
 	# normalize the input so we can't move faster diagonally
 	input = input.normalized()
+	
+	if Input.is_action_pressed("run"):
+		movementSpeed = 20
+	else:
+		movementSpeed = 10
+	
 	# get our forward and right directions
 	var forward = global_transform.basis.z
 	var right = global_transform.basis.x
