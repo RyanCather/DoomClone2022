@@ -4,19 +4,18 @@
 [ext_resource path="res://Player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.75
-height = 1.75
+height = 3.0
 
 [node name="Player" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.00449443, 0.0109802, 0.00580311 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.000194788, -0.00398767, 0.00125766 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0272771, 0 )
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.18592, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53401, 0 )
 environment = ExtResource( 1 )
 current = true
 
@@ -26,4 +25,4 @@ margin_bottom = 14.0
 text = "asdfasdfzsdfasdf"
 
 [node name="bulletSpawn" type="Spatial" parent="Camera"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.45527 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.340636, -0.485606, -0.941498 )
